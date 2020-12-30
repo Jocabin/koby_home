@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+.unselect {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: #eef;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    color: black;
+}
+
+select {
+    border: none;
+    outline: none;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header div a {
+    margin-top: 1.5em;
+    text-decoration: none;
+}
+
+/* PAGE */
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#searchBar {
+    width: 100%;
+    font-size: 1.3em;
+    margin: 0;
+    padding: .5em;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 4px;
+    transition: 0.25s;
+}
+
+#timeSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#timeSection p:first-child {
+    font-size: 5em;
+    margin-bottom: 0;
+}
+
+#timeSection p:nth-child(2) {
+    font-size: 2em;
+}
+
+#searchBar::placeholder {
+    transition: 0.25s;
+    color: black;
+    font-weight: lighter;
+}
+
+#searchBar:focus::placeholder {
+    color: transparent;
+}
+
+#searchBar:focus {
+    outline: none;
+    border: none;
+    background-color: #E0E0F3;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+#settings {
+    color: black;
+    transition: 0.25s;
+}
+
+#settings:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    height: 80%;
+    background-color: #eef;
+    margin: 5% auto;
+    font-size: 1.1em;
+    padding: 0 20px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: openmodal;
+    animation-duration: 0.3s;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+input, .modal-content input, .modal-content select {
+    color: black;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 2em;
+    margin-left: 1em;
+    font-size: .8em;
+    background-color: #E0E0F3;
+    padding: 0 1em;
+}
+
+.modal-content #credits {
+    text-align: center;
+    margin: 0;
+}
+
+.modal-content a {
+    color: #0067b8;
+}
+
+#close {
+    color: #ccc;
+    text-decoration: none;
+    float: right;
+    font-size: 30px;
+    align-self: flex-end;
+}
+
+#close:hover, #close:focus {
+    color: #aaa;
+}
+
+@media screen and (min-width: 700px) {
+    #timeSection p:first-child {
+        font-size: 6em;
+        margin-bottom: 0;
+    }
+
+    #timeSection p:nth-child(2) {
+        font-size: 2.5em;
+    }
+
+    #timeSection p:last-child {
+        font-size: 1.4em;
+    }
+
+    form {
+        width: 50%;
+        font-size: 1.3em;
+    }
+
+    header div {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    }
+
+    header div a {
+        margin-left: 1.5em;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    header {
+        padding: 0 1em;
+    }
+    #timeSection p:first-child {
+        font-size: 3em;
+        margin-bottom: 0;
+    }
+
+    #timeSection p:nth-child(2) {
+        font-size: 1.5em;
+    }
+}
+
+@keyframes openmodal {
+    from {opacity: 0}
+    to {opacity: 1}
+}

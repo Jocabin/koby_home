@@ -1,0 +1,56 @@
+html, body {
+    background-color: #1c1c1c;
+    color: #eee;
+}
+
+a {
+    color: #eee;
+}
+
+input, .modal-content input, .modal-content select {
+    background-color: #333333;
+    color: #eee;
+    border: none;
+    outline: none;
+}
+
+#searchBar::placeholder {
+    color: #eee;
+}
+
+#searchBar {
+    color: #eee;
+}
+
+#searchBar:focus {
+    outline: none;
+    background-color: #333333;
+    border: none;
+}
+
+#settings {
+    color: #eee;
+}
+
+.modal {
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+.modal-content {
+    background-color: #1c1c1c;
+}
+
+#close {
+    color: #ccc;
+}
+
+#close:hover, #close:focus {
+    color: #eee;
+}
+
+select {
+    background-color: #333333;
+    color: #eee;
+    outline: none;
+    border: none;
+}

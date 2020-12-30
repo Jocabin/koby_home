@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="https://img.icons8.com/dusk/64/000000/hub.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <header class="unselect">
+            <span>{{randomWord}} {{username}} !</span>
+            <div>
+                <a href="#" id="settings">Settings</a>
+                <a href="https://agenda-digital-b1.herokuapp.com/">Agenda Digital</a>
+            </div>
+        </header>
+
+        <section class="unselect" id="timeSection">
+            <p>{{time}}</p>
+            <p>{{seconds}}</p>
+            <p>{{date}}</p>
+        </section>
+
+        <form action="https://duckduckgo.com/" method="get" name="searchform" target="">
+            <input id="searchBar" autofocus autocomplete="off" name="q" spellcheck="false"
+                placeholder="Type here for search" required="required" type="text">
+        </form>
+
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <a href="#" id="close">&times;</a>
+                <label for="usernameBar">Username:
+                    <input id="usernameBar" autocomplete="off" spellcheck="false" type="text">
+                </label>
+                <label for="theme">Theme: <select id="theme">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </label>
+                <label for="format">Format: <select id="format">
+                        <option value="12">12H</option>
+                        <option value="24">24H</option>
+                    </select>
+                </label>
+                <label for="backgroundBar">Background: <input type="text" id="backgroundBar" autocomplete="off"
+                        placeholder="Image URL"></label>
+                <p id="credits">Created by <a target="_blank" href="https://www.instagram.com/yayakokov/">Yaakov</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
